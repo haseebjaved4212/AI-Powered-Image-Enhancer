@@ -6,14 +6,6 @@ const App = () => {
       <h1 className="text-4xl font-bold mb-4 text-amber-50">Image Enhancer</h1>
       <p className="text-lg text-gray-100">Enhance your images with ease</p>
     
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Image Enhancer icon">
-  <rect width="64" height="64" rx="12" fill="none"/>
-  <circle cx="32" cy="28" r="14" fill="none" stroke="#111" stroke-width="4"/>
-  <circle cx="28" cy="24" r="5" fill="#111"/>
-  <path d="M22 38 L40 20" fill="none" stroke="#111" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M34 20 L40 20 L40 26" fill="none" stroke="#111" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-  <polygon points="48,12 50,15 54,16 50,17 48,20 47,17 43,16 47,15" fill="#111"/>
-</svg>
 
     </div>
   )
