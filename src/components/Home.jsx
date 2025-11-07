@@ -6,14 +6,20 @@ const Home = () => {
   const [originalImage, setOriginalImage] = useState(null);
   const [enhancedImage, setEnhancedImage] = useState(null);
   const [Loading, setLoading] = useState(false);
-
-  const UploadImageHandler = (file) => {
+  // Calling Api To Enhance Image
+  const UploadImageHandler = async (file) => {
     setOriginalImage(URL.createObjectURL(file));
-    console.log(URL.createObjectURL(file));
 
     setLoading(true);
-    // Calling Api To Enhance Image
-    
+    try {
+      const enhancedUrl = await enhancedImageApi(file);
+      setEnhancedImage(enhancedUrl);
+      setLoading(false);
+    } catch (error) {
+      console.error("Error uploading image:", error);
+      alert("Failed to enhance image. Please try again.");
+      setLoading(false);
+    }
   };
   return (
     <>
