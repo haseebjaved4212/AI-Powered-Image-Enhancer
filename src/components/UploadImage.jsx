@@ -4,7 +4,7 @@ const UploadImage = (props) => {
     if (file) {
       props.UploadImageHandler(file);
     }
-    console.log(file);
+    // console.log(file);
   };
   return (
     <div className=" bg-gray-800 shadow-lg rounded-2xl p-6 w-full max-w-2xl mt-6 ">

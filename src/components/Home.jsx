@@ -12,6 +12,8 @@ const Home = () => {
     console.log(URL.createObjectURL(file));
 
     setLoading(true);
+    // Calling Api To Enhance Image
+    
   };
   return (
     <>
