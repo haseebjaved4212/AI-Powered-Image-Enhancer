@@ -1,7 +1,7 @@
 import UploadImage from "./UploadImage";
 import Preview from "./Preview";
 import { useState } from "react";
-
+import { enhancedImageApi } from "../api/enhanceImageApi";
 const Home = () => {
   const [originalImage, setOriginalImage] = useState(null);
   const [enhancedImage, setEnhancedImage] = useState(null);
