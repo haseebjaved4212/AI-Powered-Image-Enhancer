@@ -1,3 +1,6 @@
+      import "remixicon/fonts/remixicon.css";
+      
+      
       const ImageUpload = (props) => {
         const ShowImageHandler = (e) => {
           const file = e.target.files[0];
@@ -19,7 +22,7 @@
                 onChange={ShowImageHandler}
               />
               <span className="text-lg font-medium ">
-                Click and drag to upload your image
+                <i className="ri-upload-2-line"></i> Upload your Image And enhance  with AI
               </span>
             </label>
           </div>

@@ -1,5 +1,5 @@
 import Home from "./components/Home";
-import "remixicon/fonts/remixicon.css";
+
 
 const App = () => {
   return (
@@ -8,9 +8,8 @@ const App = () => {
         <h1 className="text-5xl font-bold text-white mb-2">
           AI Image Enhancer{" "}
         </h1>
-        <p className="text-lg text-gray-400">
-          <i class="ri-upload-2-line"></i>
-          Upload your Image and Enhance it using AI
+        <p className="text-lg text-gray-400 ">
+          Upload your Image and Enhance it with ease using AI Technology.
         </p>
       </div>
 
