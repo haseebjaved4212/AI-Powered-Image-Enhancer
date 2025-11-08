@@ -1,24 +1,21 @@
-import React from 'react'
-import Home from './components/Home'
-
+import Home from "./components/Home";
 const App = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 py-8 px-4 ">
-      <div className="text-center text-lg text-gray-300 ">
-        <h1 className="text-4xl font-bold mb-6 text-amber-50">
-          Image Enhancer
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 py-8 px-4 ">
+      <div className="text-center mb-8">
+        <h1 className="text-5xl font-bold text-gray-800 mb-2">
+          AI Image Enhancer{" "}
         </h1>
-        <p className="text-lg text-gray-100">Enhance your images with ease</p>
+        <p className="text-lg text-gray-500">
+          Upload your Image and let AI enhance to in seconds!
+        </p>
       </div>
 
       <Home />
 
-      <div className="text-center text-sm text-gray-500 mt-8 border-t pt-4 w-full max-w-4xl">
-        &copy; 2024 Image Enhancer. All rights reserved.
-      </div>
-        
+      <div className="text-sm text-gray-500 mt-6">Powered By @SheryiansAI</div>
     </div>
   );
-}
+};
 
-export default App
+export default App;

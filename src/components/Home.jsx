@@ -1,41 +1,36 @@
-import UploadImage from "./UploadImage";
-import Preview from "./Preview";
+import ImageUpload from "./ImageUpload";
+import ImagePreview from "./ImagePreview";
 import { useState } from "react";
-import { enhancedImageApi } from "../api/enhanceImageApi";
+import { enhancedImageAPI } from "../Utils/enhancedImageApi";
+
 const Home = () => {
-  const [originalImage, setOriginalImage] = useState(null);
-  const [enhancedImage, setEnhancedImage] = useState(null);
-  const [Loading, setLoading] = useState(false);
-  // Calling Api To Enhance Image
-  const UploadImageHandler = async (file) => {
-    setOriginalImage(URL.createObjectURL(file));
+    const [uploadImage, setUploadImage] = useState(null);
+    const [enhancedImage, setEnhancedImage] = useState(null);
+    const [loading, setloading] = useState(false);
 
-    setLoading(true);
-    try {
-      const enhancedUrl = await enhancedImageApi(file);
-      setEnhancedImage(enhancedUrl);
-      setLoading(false);
-    } catch (error) {
-      console.error("Error uploading image:", error);
-      alert("Failed to enhance image. Please try again.");
-      setLoading(false);
-    }
-  };
-  return (
-    <>
-      <UploadImage
-        UploadImageHandler={UploadImageHandler}
-        originalImage={originalImage}
-        setOriginalImage={setOriginalImage}
-      />
+    const UploadImageHandler = async (file) => {
+        setUploadImage(URL.createObjectURL(file));
+        setloading(true);
+        try {
+            const enhancedURL = await enhancedImageAPI(file);
+            setEnhancedImage(enhancedURL);
+            setloading(false);
+        } catch (error) {
+            console.log(error);
+            alert("Error while enhancing the image. Please try again later.");
+        }
+    };
 
-      <Preview
-        Loading={Loading}
-        originalImage={originalImage}
-        enhancedImage={enhancedImage}
-      />
-    </>
-  );
+    return (
+        <>
+            <ImageUpload UploadImageHandler={UploadImageHandler} />
+            <ImagePreview
+                loading={loading}
+                uploaded={uploadImage}
+                enhanced={enhancedImage?.image}
+            />
+        </>
+    );
 };
 
 export default Home;
