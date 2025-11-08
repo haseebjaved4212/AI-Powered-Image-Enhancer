@@ -1,4 +1,6 @@
 import Home from "./components/Home";
+import "remixicon/fonts/remixicon.css";
+
 const App = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-zinc-900 py-8 px-4 ">
@@ -7,13 +9,16 @@ const App = () => {
           AI Image Enhancer{" "}
         </h1>
         <p className="text-lg text-gray-400">
+          <i class="ri-upload-2-line"></i>
           Upload your Image and Enhance it using AI
         </p>
       </div>
 
       <Home />
 
-      <div className="text-lg border-t-2 mt-12 border-gray-700 text-center text-gray-500 ">&copy; 2025 Haseeb Javed . All rights reserved.</div>
+      <div className="text-lg border-t-2 mt-12 border-gray-700 text-center text-gray-500 ">
+        &copy; 2025 Haseeb Javed . All rights reserved.
+      </div>
     </div>
   );
 };
